@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #ffa500;
+  --color-secondary: #1e1d1d;
+  --font-mono: "JetBrains Mono";
+}
+
+body {
+  background-color: var(--color-secondary);
+  overflow-x: hidden;
+}
