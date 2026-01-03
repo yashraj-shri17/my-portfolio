@@ -8,7 +8,18 @@ import { FaFileAlt, FaHandshake } from "react-icons/fa";
 import { titles } from "../data";
 import Link from "next/link";
 
+
 const HeroSection = () => {
+  const [viewCount, setViewCount] = useState<number | null>(null);
+  // Fetch profile view count on mount
+  useEffect(() => {
+    fetch("/api/views")
+      .then((res) => res.json())
+      .then((data) => {
+        if (typeof data.count === "number") setViewCount(data.count);
+      });
+  }, []);
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -338,6 +349,13 @@ const HeroSection = () => {
           </div>
         </div>
       </motion.div>
+
+      {/* Profile View Count - less prominent, bottom right */}
+      {viewCount !== null && (
+        <div className="fixed bottom-4 right-4 z-40 bg-white/80 text-primary px-4 py-2 rounded-full shadow-md text-sm font-semibold backdrop-blur-sm">
+          Profile Views: {viewCount}
+        </div>
+      )}
     </motion.div>
   );
 };
