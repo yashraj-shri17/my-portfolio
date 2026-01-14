@@ -310,7 +310,7 @@ const HeroSection = () => {
             <div className="bg-primary text-white rounded-full px-4 md:px-6 lg:px-8 py-0.5 md:py-1 font-bold text-base md:text-lg lg:text-xl">
               <span className="md:block hidden">hello</span>
               <div className="block md:hidden text-lg leading-tight">
-                <span className="text-white">{displayText}</span>
+                <span className="text-white" suppressHydrationWarning>{displayText}</span>
                 <span className="animate-pulse text-white">|</span>
               </div>
             </div>
@@ -341,7 +341,7 @@ const HeroSection = () => {
             >
               <span className="font-medium">I am a</span>
               <br />
-              <span className="whitespace-pre-line">
+              <span className="whitespace-pre-line" suppressHydrationWarning>
                 {displayText}
               </span>
               <span className="animate-pulse text-primary">|</span>
