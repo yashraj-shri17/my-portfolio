@@ -12,6 +12,7 @@ export interface Project {
   tech: string;
   github: string;
   imgUrl: string;
+  demo?: string;
 }
 const StepsCard = ({
   i,
@@ -37,7 +38,7 @@ const StepsCard = ({
         style={{ scale }}
         className="relative flex flex-col md:flex-row h-auto w-full origin-top rounded-xl bg-white shadow-2xl overflow-hidden"
       >
-        
+
         <div className="w-full md:w-[35%] bg-primary p-8 md:p-12 flex items-center justify-center relative min-h-[250px] md:min-h-[400px]">
           <div>
             <Image
@@ -102,28 +103,52 @@ const StepsCard = ({
             ))}
           </div>
 
-          {/* GitHub link */}
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 mt-4 text-sm md:text-base font-mono font-semibold text-secondary hover:text-primary transition-colors w-fit group"
-          >
-            <span>View on GitHub</span>
-            <svg
-              className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          <div className="flex flex-wrap items-center gap-4 mt-4">
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm md:text-base font-mono font-semibold text-secondary hover:text-primary transition-colors w-fit group"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              />
-            </svg>
-          </a>
+              <span>View on GitHub</span>
+              <svg
+                className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </a>
+            {project.demo && (
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm md:text-base font-mono font-semibold text-black hover:text-primary transition-colors w-fit group"
+              >
+                <span>Live Demo</span>
+                <svg
+                  className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 4v16m8-8H4"
+                  />
+                </svg>
+              </a>
+            )}
+          </div>
         </div>
       </motion.div>
     </div>
@@ -161,21 +186,19 @@ const ProjectsSection: React.FC = () => {
             <div className="flex items-center gap-3 flex-wrap">
               <button
                 onClick={() => setActiveTab("genai")}
-                className={`px-4 py-2 rounded-full font-mono font-semibold text-sm tracking-tight transition-all duration-300 cursor-pointer ${
-                  activeTab === "genai"
-                    ? "bg-primary text-secondary"
-                    : "bg-white text-black hover:bg-gray-200"
-                }`}
+                className={`px-4 py-2 rounded-full font-mono font-semibold text-sm tracking-tight transition-all duration-300 cursor-pointer ${activeTab === "genai"
+                  ? "bg-primary text-secondary"
+                  : "bg-white text-black hover:bg-gray-200"
+                  }`}
               >
                 Generative AI & LLM
               </button>
               <button
                 onClick={() => setActiveTab("ml")}
-                className={`px-4 py-2 rounded-full font-mono font-semibold text-sm tracking-tight transition-all duration-300 cursor-pointer ${
-                  activeTab === "ml"
-                    ? "bg-primary text-secondary"
-                    : "bg-white text-black hover:bg-gray-200"
-                }`}
+                className={`px-4 py-2 rounded-full font-mono font-semibold text-sm tracking-tight transition-all duration-300 cursor-pointer ${activeTab === "ml"
+                  ? "bg-primary text-secondary"
+                  : "bg-white text-black hover:bg-gray-200"
+                  }`}
               >
                 Machine Learning
               </button>
