@@ -218,7 +218,7 @@ export const generativeAIProjects: Project[] = [
       "Built a domain-specific chatbot for ISRO's MOSDAC data with natural-language querying for satellites, missions, and weather. Integrated 1000+ documents into an LLaMA-3.1 RAG pipeline. Added speech-to-text, conversational memory, and PDF export.",
     github: "https://github.com/yashraj-shri17/AstroBot",
     imgUrl: "/AstroBot.png",
-    demo: "https://huggingface.co/spaces/YASHRAJ170803/AstroBot",
+    liveDemo: "https://huggingface.co/spaces/YASHRAJ170803/AstroBot",
   },
   {
     name: "TruthTell",
@@ -228,7 +228,7 @@ export const generativeAIProjects: Project[] = [
       "Real-time misinformation detection with 87.6% F1-score. Reduced inference latency by 65% and deployed a scalable Flask app.",
     github: "https://github.com/arynch24/MediVerus",
     imgUrl: "/TruthTell.png",
-    demo: "https://github.com/arynch24/MediVerus",
+    liveDemo: "#",
   },
   {
     name: "Video Person Tracker",
@@ -238,7 +238,7 @@ export const generativeAIProjects: Project[] = [
       "Multi-person real-time face recognition with 92% accuracy. Improved analytics by 40% and reduced false positives by 35%.",
     github: "https://github.com/infy-dinkar/Face-Recognition",
     imgUrl: "/VideoPersonTracker.png",
-    demo: "https://github.com/infy-dinkar/Face-Recognition",
+    liveDemo: "#",
   },
   {
     name: "AI Personal Assistants / Agents",
@@ -248,7 +248,7 @@ export const generativeAIProjects: Project[] = [
       "Built micro AI agents assisting with tasks like scheduling, reminders, and information retrieval.",
     github: "https://github.com/yashraj-shri17/Text-Summarization",
     imgUrl: "/AiAgents.png",
-    demo: "https://github.com/yashraj-shri17/Text-Summarization",
+    liveDemo: "#",
   },
 ];
 
@@ -261,7 +261,7 @@ export const machineLearningProjects: Project[] = [
       "Predicts suitable job roles from resumes and skills. Supports filters for internships, full-time roles, and remote jobs.",
     github: "https://github.com/yashraj-shri17/resume_analyser",
     imgUrl: "/SmartJobMatcher.png",
-    demo: "https://github.com/yashraj-shri17/resume_analyser",
+    liveDemo: "#",
   },
   {
     name: "Momenta",
@@ -272,5 +272,6 @@ export const machineLearningProjects: Project[] = [
     github:
       "https://github.com/yashraj-shri17/Momenta-Audio-Deepfake-Detection",
     imgUrl: "/Momenta.png",
+    liveDemo: "#",
   },
 ];

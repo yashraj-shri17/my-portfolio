@@ -12,7 +12,7 @@ export interface Project {
   tech: string;
   github: string;
   imgUrl: string;
-  demo?: string;
+  liveDemo?: string;
 }
 const StepsCard = ({
   i,
@@ -103,6 +103,7 @@ const StepsCard = ({
             ))}
           </div>
 
+          {/* GitHub link */}
           <div className="flex flex-wrap items-center gap-4 mt-4">
             <a
               href={project.github}
@@ -125,12 +126,12 @@ const StepsCard = ({
                 />
               </svg>
             </a>
-            {project.demo && (
+            {project.liveDemo && (
               <a
-                href={project.demo}
+                href={project.liveDemo}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm md:text-base font-mono font-semibold text-black hover:text-primary transition-colors w-fit group"
+                className="inline-flex items-center gap-2 text-sm md:text-base font-mono font-semibold text-secondary hover:text-primary transition-colors w-fit group"
               >
                 <span>Live Demo</span>
                 <svg
@@ -143,7 +144,7 @@ const StepsCard = ({
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M12 4v16m8-8H4"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                   />
                 </svg>
               </a>
