@@ -1,5 +1,19 @@
-import Certification from "./Components/Certification";
 import { Project } from "./Sections/ProjectsSection";
+
+export interface WorkExperience {
+  id: string;
+  role: string;
+  company: string;
+  period: string;
+  techStack: string[];
+  projects: {
+    name: string;
+    description: string;
+    github?: string;
+    liveDemo?: string;
+    details?: string[];
+  }[];
+}
 
 export const achievementsData = [
   {
@@ -148,8 +162,16 @@ export const skillsData = [
       "Groq",
       "NVIDIA NeMo",
       "Crew AI",
+      "Whisper",
+      "Azure TTS",
+      "HeyGen",
+      "FAISS",
+      "BM25",
       "RAG",
       "LLM Fine-tuning",
+      "JWT",
+      "Razorpay",
+      "Resend",
     ],
     description:
       "Experienced in chatbot development, RAG workflows, AI agents, prompt engineering, and fine-tuning LLMs for domain-specific applications.",
@@ -273,5 +295,49 @@ export const machineLearningProjects: Project[] = [
       "https://github.com/yashraj-shri17/Momenta-Audio-Deepfake-Detection",
     imgUrl: "/Momenta.png",
     liveDemo: "#",
+  },
+];
+
+export const workExperience: WorkExperience[] = [
+  {
+    id: "1",
+    role: "AI Engineer Intern",
+    company: "Just Learn",
+    period: "Feb 2026 – Present",
+    techStack: [
+      "LLaMA-3.1",
+      "RAG",
+      "FAISS",
+      "LangChain",
+      "Groq",
+      "Whisper",
+      "Azure TTS",
+      "Flask",
+      "HeyGen",
+    ],
+    projects: [
+      {
+        name: "Talk To Krishna: AI Spiritual Voice Assistant",
+        github: "https://github.com/yashraj-shri17",
+        liveDemo: "https://talktokrishna.ai",
+        description:
+          "Architected a production-grade AI voice assistant using a Hybrid RAG system (FAISS + BM25) to ground LLM responses in 700 Bhagavad Gita shlokas.",
+        details: [
+          "Optimized low-latency inference with LLaMA-3.1 (Groq) and prompt orchestration for context-aware reasoning.",
+          "Built a multimodal (Whisper + Azure TTS) pipeline for real-time multilingual (Hindi, English, Japanese) interaction.",
+          "Deployed via CI/CD on Render with persistent caching, reducing cold-start by 60%.",
+          "Ensured robustness with JWT auth, rate-limiting, and integrations like Razorpay and Resend.",
+        ],
+      },
+      {
+        name: "AI Avatar Enhancement for Learning Videos",
+        description:
+          "Integrated HeyGen AI avatars into existing lecture videos to add interactive, human-like visual overlays, enhancing learner engagement.",
+        details: [
+          "Designed workflows to seamlessly augment pre-recorded content with avatar-driven explanations.",
+          "Improved the overall learning experience and content interactivity through AI-driven visual overlays.",
+        ],
+      },
+    ],
   },
 ];
