@@ -1,3 +1,4 @@
+import Certification from "./Components/Certification";
 import { Project } from "./Sections/ProjectsSection";
 
 export interface WorkExperience {
