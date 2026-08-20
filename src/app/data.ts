@@ -5,6 +5,7 @@ export interface WorkExperience {
   id: string;
   role: string;
   company: string;
+  location?: string;
   period: string;
   techStack: string[];
   projects: {
@@ -303,7 +304,45 @@ export const workExperience: WorkExperience[] = [
   {
     id: "1",
     role: "AI Engineer Intern",
+    company: "Zakava Ltd (PolicyPrompt)",
+    location: "London, UK (Remote)",
+    period: "July 2026 – Present",
+    techStack: [
+      "FastAPI",
+      "FAISS",
+      "Microsoft Presidio",
+      "LLM-as-a-Judge",
+      "Semantic Search",
+      "API Gateway",
+      "Python",
+    ],
+    projects: [
+      {
+        name: "AI Governance & Compliance Proxy System",
+        description:
+          "Built an AI governance and compliance proxy system for automated policy and document review, combining FastAPI, FAISS, and Presidio with an LLM-judge architecture backed by a deterministic override layer.",
+        details: [
+          "Architected an LLM-judge evaluation engine with deterministic override logic to guarantee reliable, audit-ready compliance decisions.",
+          "Shipped end-to-end clause extraction, PII detection & masking (Presidio), and semantic retrieval (FAISS) pipelines, closing 24+ GitHub issues.",
+          "Collaborated directly with CTO as primary technical owner, deploying the system directly into production governance workflows.",
+        ],
+      },
+      {
+        name: "Standalone API Gateway Sub-Project",
+        description:
+          "Designed and delivered a fully independent API Gateway as a standalone sub-project to extend system modularity and production readiness.",
+        details: [
+          "Implemented centralized routing, security policies, request orchestration, and telemetry for downstream AI services.",
+          "Recognized for high reliability and clean architectural handoffs in production governance environments.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "2",
+    role: "AI Engineer Intern",
     company: "Just Learn",
+    location: "Noida, India (Onsite)",
     period: "Feb 2026 – Present",
     techStack: [
       "LLaMA-3.1",
@@ -337,6 +376,33 @@ export const workExperience: WorkExperience[] = [
         details: [
           "Designed workflows to seamlessly augment pre-recorded content with avatar-driven explanations.",
           "Improved the overall learning experience and content interactivity through AI-driven visual overlays.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "3",
+    role: "Founding AI Engineer Intern (Part-time)",
+    company: "Kaika AI",
+    location: "Tokyo, Japan",
+    period: "Jan 2026 – Present",
+    techStack: [
+      "Python",
+      "FastAPI",
+      "System Architecture",
+      "LLM Integration",
+      "Backend Systems",
+      "AI Feature Design",
+    ],
+    projects: [
+      {
+        name: "Core Product & Backend AI Architecture",
+        description:
+          "Working as a founding engineer on Kaika AI's core product, owning backend architecture and AI integration from the ground up, including feature design decisions at the earliest product stage.",
+        details: [
+          "Architected core backend services and AI integration layer from the ground up at the earliest product stage.",
+          "Drove foundational feature design and system architecture decisions with founder-level ownership across the full stack.",
+          "Operated with high ownership in a fast-moving startup environment to build scalable and resilient AI features.",
         ],
       },
     ],
